@@ -10,14 +10,18 @@ namespace _03_Parrot_Repeat_Back
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Olen papagoi programm");
+            Console.WriteLine("Mina olen papagoi programm. Ütle mulle midagi ja ma kordan selle sulle tagasi...");
+            Console.WriteLine();
+
             Console.Write("Sina ütled: ");
 
             string input = Console.ReadLine();
 
-            Console.WriteLine($"Mina ütlen: {input}");
+            Console.WriteLine("Mina ütlen: " + input);
+            Console.WriteLine();
 
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("Press any key to continue");
+
             Console.ReadLine();
         }
     }

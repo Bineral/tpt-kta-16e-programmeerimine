@@ -10,9 +10,15 @@ namespace _02_Print_Text_To_Console
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Tere");
             Console.WriteLine();
-            Console.Write("\n");
-            Console.Write(Environment.NewLine);
+            Console.WriteLine("Minu nimi on (sisesta oma nimi) ning õpin esimest korda programmeerima");
+            Console.WriteLine();
+            Console.WriteLine("Kindlasti on võimalik midagi rohkemat, kui lihtsalt teksti printimine \n");
+
+            Console.WriteLine("Press any key to continue");
+
+            Console.ReadLine();
         }
     }
 }

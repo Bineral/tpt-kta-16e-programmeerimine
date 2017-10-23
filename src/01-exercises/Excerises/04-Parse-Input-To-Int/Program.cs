@@ -11,13 +11,20 @@ namespace _04_Parse_Input_To_Int
         static void Main(string[] args)
         {
 
-            string a = "5";
-            string b = "64";
+            Console.WriteLine("Mina olen kalkulaatori programm. Ütle mulle 2 numbrit ja ma ütlen Sulle nende summa");
+            Console.WriteLine();
 
-            int arv = int.Parse(a);
-            int s = Convert.ToInt32(a);
+            Console.Write("Esimene number: ");
+            string input1 = Console.ReadLine();
 
-            Console.WriteLine($"Summa on: {(a + b)}");
+            Console.Write("Teine number: ");
+            string input2 = Console.ReadLine();
+
+            int number1 = int.Parse(input1);
+            int number2 = int.Parse(input2);
+
+            Console.WriteLine("Tulemuseks on: " + (number1 + number2));
+            Console.WriteLine("Press any key to continue");
 
             Console.ReadLine();
         }
