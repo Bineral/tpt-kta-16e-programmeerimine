@@ -11,11 +11,16 @@
 
             var random = new Random();
 
-            Console.WriteLine($"1d6: { random.Next(1, 7)}");
-            Console.WriteLine($"1d6: { random.Next(1, 7)}");
-            Console.WriteLine($"1d6: { random.Next(1, 7)}");
-            Console.WriteLine($"1d8: { random.Next(1, 9)}");
-            Console.WriteLine($"1d8: { random.Next(1, 9)}");
+            for (var i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"1d6: { random.Next(1, 7)}");
+            }
+
+            for (var i = 0; i < 2; i++)
+            {
+                Console.WriteLine($"1d8: { random.Next(1, 9)}");
+            }
+
 
             Console.WriteLine();
             Console.WriteLine($"Roll total: 20");
