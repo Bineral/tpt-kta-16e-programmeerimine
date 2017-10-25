@@ -6,9 +6,14 @@
     {
         private Random Random { get; } = new Random();
 
-        public int Roll(int sides)
+        public Dice(int sides)
         {
-            return this.Random.Next(1, sides + 1); // max value is exclusive, so we have to add +1
+            
+        }
+
+        public int Roll()
+        {
+            return 0;
         }
     }
 }
