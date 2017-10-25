@@ -8,7 +8,7 @@
 
         public string Description { get; }
 
-        private Random Random { get; } = new Random();
+        private static Random Random { get; } = new Random();
 
         private Dice(int sides, string description)
         {
@@ -23,7 +23,7 @@
 
         public int Roll()
         {
-            return this.Random.Next(1, this.Sides + 1); // max value is exlusive, so we have to add +1
+            return Dice.Random.Next(1, this.Sides + 1); // max value is exlusive, so we have to add +1
         }
     }
 }
