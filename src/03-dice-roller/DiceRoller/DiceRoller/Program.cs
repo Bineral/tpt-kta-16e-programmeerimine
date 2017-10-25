@@ -10,20 +10,27 @@
             Console.WriteLine();
 
             var random = new Random();
+            var total = 0;
 
             for (var i = 0; i < 3; i++)
             {
-                Console.WriteLine($"1d6: { random.Next(1, 7)}");
+                var roll = random.Next(1, 7);
+                total += roll;
+
+                Console.WriteLine($"1d6: { roll }");
             }
 
             for (var i = 0; i < 2; i++)
             {
-                Console.WriteLine($"1d8: { random.Next(1, 9)}");
+                var roll = random.Next(1, 9);
+                total += roll;
+
+                Console.WriteLine($"1d8: { roll }");
             }
 
 
             Console.WriteLine();
-            Console.WriteLine($"Roll total: 20");
+            Console.WriteLine($"Roll total: { total }");
             Console.WriteLine();
             Console.Write("> ");
 
