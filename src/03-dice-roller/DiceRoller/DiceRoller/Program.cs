@@ -14,6 +14,11 @@
             List<DiceRoll> diceRolls = diceRoller.Roll(
                 new List<Dice> { Dice.D6, Dice.D6, Dice.D6, Dice.D8, Dice.D8 });
 
+            foreach (var diceRoll in diceRolls)
+            {
+                Console.WriteLine($"1{diceRoll.Dice}: {diceRoll.Value}");
+            }
+
 
             /*
             Dice d6 = Dice.D6;
