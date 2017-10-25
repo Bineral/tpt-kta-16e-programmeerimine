@@ -6,11 +6,14 @@
     {
         public int Sides { get; }
 
+        public string Description { get; }
+
         private Random Random { get; } = new Random();
 
-        public Dice(int sides)
+        public Dice(int sides, string description)
         {
             this.Sides = sides;
+            this.Description = description;
         }
 
         public int Roll()
