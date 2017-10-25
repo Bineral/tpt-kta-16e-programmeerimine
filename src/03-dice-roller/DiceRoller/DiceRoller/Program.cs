@@ -9,11 +9,13 @@
             Console.WriteLine("> /roll 3d6 2d8");
             Console.WriteLine();
 
-            Console.WriteLine("1d6: 5");
-            Console.WriteLine("1d6: 3");
-            Console.WriteLine("1d6: 2");
-            Console.WriteLine("1d8: 6");
-            Console.WriteLine("1d8: 4");
+            var random = new Random();
+
+            Console.WriteLine($"1d6: { random.Next(1, 7)}");
+            Console.WriteLine($"1d6: { random.Next(1, 7)}");
+            Console.WriteLine($"1d6: { random.Next(1, 7)}");
+            Console.WriteLine($"1d8: { random.Next(1, 9)}");
+            Console.WriteLine($"1d8: { random.Next(1, 9)}");
 
             Console.WriteLine();
             Console.WriteLine($"Roll total: 20");
