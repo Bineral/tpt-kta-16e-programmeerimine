@@ -1,6 +1,7 @@
 ﻿namespace DiceRoller
 {
     using System;
+    using System.Collections.Generic;
 
     public class Program
     {
@@ -9,6 +10,12 @@
             Console.WriteLine("> /roll 3d6 2d8");
             Console.WriteLine();
 
+            DiceRoller diceRoller = new DiceRoller();
+            List<DiceRoll> diceRolls = diceRoller.Roll(
+                new List<Dice> { Dice.D6, Dice.D6, Dice.D6, Dice.D8, Dice.D8 });
+
+
+            /*
             Dice d6 = Dice.D6;
 
             var total = 0;
@@ -29,10 +36,13 @@
 
                 Console.WriteLine($"1{ d8.Description }: { roll }");
             }
+            
 
 
             Console.WriteLine();
             Console.WriteLine($"Roll total: { total }");
+            */
+
             Console.WriteLine();
             Console.Write("> ");
 
