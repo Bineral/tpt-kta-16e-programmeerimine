@@ -1,6 +1,7 @@
 ﻿namespace Blackjack.Client.Console
 {
     using System;
+    using System.Collections.Generic;
 
     using Blackjack.Core;
 
@@ -14,19 +15,20 @@
             Console.WriteLine("Welcome to the game of Blackjack!");
             Console.WriteLine();
 
-            var c4 = new Card("4", Suite.Club, 4);
-            c4.Hidden = false;
+            var cards = new List<Card>
+                            {
+                                new Card("4", Suite.Club, 4, false),
+                                new Card("6", Suite.Heart, 6, false),
+                                new Card("8", Suite.Spade, 8, false),
+                                new Card("J", Suite.Diamond, 10, true),
+                                new Card("4", Suite.Spade, 4, false),
+                                new Card("T", Suite.Heart, 10, true)
+                            };
 
-            var h6 = new Card("6", Suite.Heart, 6);
-            h6.Hidden = false;
+            var deck = new Deck(cards);
 
-            var s8 = new Card("8", Suite.Spade, 8);
-            s8.Hidden = false;
-
-            var dJ = new Card("J", Suite.Diamond, 10);
-
-            Console.WriteLine($"You have been dealt: {GetCardDescription(c4)}, {GetCardDescription(h6)}");
-            Console.WriteLine($"House has been dealt: {GetCardDescription(s8)}, { GetCardDescription(dJ)}");
+            Console.WriteLine($"You have been dealt: {GetCardDescription(deck.Next())}, {GetCardDescription(deck.Next())}");
+            Console.WriteLine($"House has been dealt: {GetCardDescription(deck.Next())}, { GetCardDescription(deck.Next())}");
             Console.WriteLine();
 
             Console.WriteLine("What do you want to do?");
@@ -36,13 +38,8 @@
             Console.WriteLine("I choose: 1");
             Console.WriteLine();
 
-            var s4 = new Card("4", Suite.Spade, 4);
-            s4.Hidden = false;
-
-            var hT = new Card("T", Suite.Heart, 10);
-
-            Console.WriteLine($"You have been dealt: {GetCardDescription(s4)}");
-            Console.WriteLine($"House has been dealt: {GetCardDescription(hT)}");
+            Console.WriteLine($"You have been dealt: {GetCardDescription(deck.Next())}");
+            Console.WriteLine($"House has been dealt: {GetCardDescription(deck.Next())}");
             Console.WriteLine();
 
             Console.WriteLine("What do you want to do?");
