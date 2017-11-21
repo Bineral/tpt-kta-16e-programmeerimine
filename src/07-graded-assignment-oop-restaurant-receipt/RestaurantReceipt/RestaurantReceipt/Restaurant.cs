@@ -16,7 +16,7 @@
 
         public Receipt GetReceipt(Tab tab)
         {
-            throw new NotImplementedException();
+            return new Receipt(this._name, this._address, tab);
         }
     }
 }

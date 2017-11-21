@@ -9,7 +9,7 @@
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Restaurant restaurant = new Restaurant("Taco Palenque", "1200 Main ST.");
-
+            
             Tab tab = new Tab();
 
             tab.Add(7.99);
